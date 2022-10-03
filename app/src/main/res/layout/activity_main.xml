@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="false"
+    android:layout_centerHorizontal="false"
+    android:layout_centerVertical="false"
+    android:padding="20px"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/textview_first"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Make Your Own Pizza!"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+    <TextView
+        android:id="@+id/textview_first2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/userInfo"
+        android:layout_marginTop="-56dp"
+        android:layout_marginBottom="4dp"
+        android:text="Contact Details"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/userInfo"
+        android:text="Submit" />
+
+    <RelativeLayout
+        android:layout_width="401dp"
+        android:layout_height="442dp"
+        android:layout_below="@+id/textview_first"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/customborder"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="511dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="20px"
+            android:text="Size of the Pizza"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/radio_group"
+            android:layout_width="373dp"
+            android:layout_height="207dp"
+            android:layout_below="@+id/textView">
+
+            <RadioButton
+                android:id="@+id/sixSlice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView"
+                android:text="Round Pizza 6 slices - serves 3 people ($5.50)" />
+
+            <RadioButton
+                android:id="@+id/eightSlice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sixSlice"
+                android:text="Round Pizza 8 slices - serves 4 people ($7.99)" />
+
+            <RadioButton
+                android:id="@+id/tenSlice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/eightSlice"
+                android:text="Round Pizza 10 slices - serves 5 people ($9.50)" />
+
+            <RadioButton
+                android:id="@+id/twelveSlice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tenSlice"
+                android:text="Round Pizza 12 slices - serves 6 people ($11.38)" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="511dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/radio_group"
+            android:layout_weight="1"
+            android:padding="20px"
+            android:text="Topping"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="181dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/spinner"
+            android:layout_marginTop="15dp"
+            android:layout_weight="1"
+            android:padding="20px"
+            android:text="Extra Cheese($5)"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="188dp"
+            android:layout_height="59dp"
+            android:layout_below="@+id/textView3"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:padding="20px"
+            android:text="Include Delivery($5)"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="264dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView2" />
+
+        <CheckBox
+            android:id="@+id/cheese"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/spinner"
+            android:layout_marginLeft="-2dp"
+            android:layout_marginTop="11dp"
+            android:layout_toRightOf="@+id/textView3"
+            android:text="" />
+
+        <CheckBox
+            android:id="@+id/delivery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/spinner"
+            android:layout_marginLeft="-2dp"
+            android:layout_marginTop="57dp"
+            android:layout_toRightOf="@+id/textView3"
+            android:text="" />
+
+        <EditText
+            android:id="@+id/instructions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cheese"
+            android:layout_marginStart="-13dp"
+            android:layout_marginTop="-3dp"
+            android:layout_toEndOf="@+id/delivery"
+            android:ems="10"
+            android:inputType="text"
+            android:hint="Special Instructions" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/userInfo"
+        android:layout_width="406dp"
+        android:layout_height="180dp"
+        android:layout_below="@+id/textview_first"
+        android:layout_marginTop="530dp"
+        android:background="@drawable/customborder"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Name" />
+
+        <EditText
+            android:id="@+id/address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:layout_below="@+id/name"
+            android:hint="Address" />
+
+        <EditText
+            android:id="@+id/phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/address"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Phone" />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/phone"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Email" />
+    </RelativeLayout>
+
+</RelativeLayout>
